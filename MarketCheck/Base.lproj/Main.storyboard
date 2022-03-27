@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tSB-bd-ei1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mercado Check-->
+        <scene sceneID="kzG-lx-UdH">
+            <objects>
+                <tableViewController storyboardIdentifier="MyTableViewController" id="kya-Bx-RUP" customClass="MyTableViewController" customModule="MarketCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Kfl-y5-rOR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="kya-Bx-RUP" id="wdh-Qh-ex8"/>
+                            <outlet property="delegate" destination="kya-Bx-RUP" id="El8-H4-Lav"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mercado Check" id="6M8-z6-C86">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="lQI-SX-3uP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Itens" style="plain" id="fAv-6O-SH5">
+                            <connections>
+                                <segue destination="Y3V-n1-LKI" kind="show" id="CkW-Fx-5ON"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OXT-3F-dat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1281" y="-204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3LY-n6-9de">
+            <objects>
+                <navigationController toolbarHidden="NO" id="tSB-bd-ei1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LQg-VR-qEn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="linkColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="linkColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Frd-pv-ybb">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="kya-Bx-RUP" kind="relationship" relationship="rootViewController" id="IlQ-LL-OI4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B7R-o4-yNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="-203"/>
+        </scene>
+        <!--Mercado Check-->
+        <scene sceneID="dA2-Fo-biP">
+            <objects>
+                <tableViewController storyboardIdentifier="AdicaoDeItem" id="Y3V-n1-LKI" customClass="AdicaoDeItem" customModule="MarketCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lqj-Uf-9Gl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Y3V-n1-LKI" id="aVH-EA-7FJ"/>
+                            <outlet property="delegate" destination="Y3V-n1-LKI" id="wb6-Z9-ENc"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Novo Item" style="done" id="Jv2-u6-aIQ">
+                            <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <segue destination="Ggn-ZW-haF" kind="show" id="aCD-b5-JiW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Novo Item" style="done" id="LQT-1s-Z8K">
+                            <connections>
+                                <segue destination="Ggn-ZW-haF" kind="show" id="ZX7-Cc-olL"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Mercado Check" largeTitleDisplayMode="never" id="kbj-DW-6qo">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="Pxu-vW-nR0"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="trash" id="izF-6J-4mP">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="DeleteItens" destination="Y3V-n1-LKI" id="FeY-LK-RNq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flm-JC-KZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="-204"/>
+        </scene>
+        <!--AddItemController-->
+        <scene sceneID="DO4-dK-zYt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AddItemController" storyboardName="AddItemController" referencedIdentifier="AddItemController" id="Ggn-ZW-haF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yBS-2P-0JU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RiS-RB-xWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2819" y="-191"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZX7-Cc-olL"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
